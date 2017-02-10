@@ -1,0 +1,133 @@
+body {
+  margin: 15px;
+}
+
+h1 {
+  margin: 15px 0;
+}
+
+#root {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.visualize-checkbox {
+  margin-top: 10px;
+}
+
+.field {
+  position: relative;
+  border-collapse: collapse; 
+}
+
+.blocking-input-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.cell {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #000;
+}
+
+.cell-wall::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 75%;
+  height: 75%;
+  background-color: #000;
+}
+
+.cell:hover {
+  background-color: #c4e3a8;
+}
+
+.cell-wall:hover {
+  background-color: #f67272;
+  cursor: not-allowed;
+}
+
+.cell-selected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #FFF200;
+}
+
+.cell-path::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+
+.arrow-right::after {
+  background-image: url(img/arrow-right.png);
+}
+.arrow-bottom::after {
+  background-image: url(img/arrow-right.png);
+  transform: rotate(90deg);
+}
+.arrow-left::after {
+  background-image: url(img/arrow-right.png);
+  transform: rotate(180deg);
+}
+.arrow-top::after {
+  background-image: url(img/arrow-right.png);
+  transform: rotate(270deg);
+}
+.arrow-top-right::after {
+  background-image: url(img/arrow-top-right.png);
+}
+.arrow-right-bottom::after {
+  background-image: url(img/arrow-top-right.png);
+  transform: rotate(90deg);
+}
+.arrow-bottom-left::after {
+  background-image: url(img/arrow-top-right.png);
+  transform: rotate(180deg);
+}
+.arrow-left-top::after {
+  background-image: url(img/arrow-top-right.png);
+  transform: rotate(270deg);
+}
+.arrow-bottom-right::after {
+  background-image: url(img/arrow-bottom-right.png);
+}
+.arrow-left-bottom::after {
+  background-image: url(img/arrow-bottom-right.png);
+  transform: rotate(90deg);
+}
+.arrow-top-left::after {
+  background-image: url(img/arrow-bottom-right.png);
+  transform: rotate(180deg);
+}
+.arrow-right-top::after {
+  background-image: url(img/arrow-bottom-right.png);
+  transform: rotate(270deg);
+}
+.finish::after {
+  background-image: url(img/finish.png);
+}
+
